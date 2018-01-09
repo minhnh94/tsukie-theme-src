@@ -3,7 +3,10 @@
         <h3 class="widget-title"><%= __('sidebar.recents') %></h3>
         <div class="widget">
             <ul id="recent-post" class="<%= (theme.customize.thumbnail?'':'no-thumbnail') %>">
-                <% site.posts.sort('date', -1).limit(5).each(function(post) { %>
+                <% var postCount = 0; %>
+                <% site.posts.sort('date', -1).each(function(post) { %>
+                    <% if (post.lang === page.lang && postCount < 5) { %>
+                    <% postCount++; %>
                     <li>
                         <% if (theme.customize.thumbnail === true) { %>
                         <div class="item-thumbnail">
@@ -16,6 +19,7 @@
                             <p class="item-date"><time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date) %></time></p>
                         </div>
                     </li>
+                    <% } %>
                 <% }) %>
             </ul>
         </div>
