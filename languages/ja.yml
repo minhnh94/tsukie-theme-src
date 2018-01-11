@@ -32,6 +32,6 @@ insight:
     tags: 'タグ'
     untitled: '（名称未設定）'
 categories:
-    lifestyle: "人生・生活"
-    technologies: "技術"
-    travel: "旅行"
+    jinsei-seikatsu: "人生・生活"
+    gijutsu: "技術"
+    ryoko: "旅行"

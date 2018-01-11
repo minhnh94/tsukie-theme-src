@@ -32,6 +32,6 @@ insight:
     tags: 'Thẻ'
     untitled: '(Không đề)'
 categories:
-    lifestyle: "cuộc sống"
-    technologies: "công nghệ"
-    travel: "du lịch"
+    cuoc-song: "cuộc sống"
+    cong-nghe: "công nghệ"
+    du-lich: "du lịch"

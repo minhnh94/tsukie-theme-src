@@ -1,9 +1,9 @@
 # Menus
 menu:
-    Home: /
+    Home: index.html
     # Delete this row if you don't want categories in your header nav bar
     Categories:
-    About: /about.html
+    About: about.html
 
 # Customize
 customize:
