@@ -1,9 +1,21 @@
 # Menus
 menu:
-    Home: index.html
+    Home: /index.html
     # Delete this row if you don't want categories in your header nav bar
     Categories:
-    About: about.html
+        en:
+            lifestyle: lifestyle
+            technologies: technologies
+            travel: travel
+        vi:
+            cuoc-song: cuộc sống
+            cong-nghe: công nghệ
+            du-lich: du lịch
+        ja:
+            jinsei-seikatsu: 人生・生活
+            gijutsu: 技術
+            ryoko: 旅行
+    About: /about.html
 
 # Customize
 customize:

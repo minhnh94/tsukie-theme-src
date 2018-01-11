@@ -18,15 +18,14 @@
                         <ul id="main-nav">
                             <% for (var i in theme.menu) {
                                     if (i == 'Categories') { %>
-                                        <%- list_categories({
-                                            depth: 2,
-                                            style: 'list',
-                                            class: 'main-nav',
-                                            show_count: false,
-                                        }) %>
+                                        <% for (link in theme.menu[i][page.lang]) { %>
+                                            <li class="main-nav-list-item">
+                                                <a class="main-nav-list-link" href="<%- url_for('categories/' + link).replace('../', '') %>"><%= theme.menu[i][page.lang][link] %></a>
+                                            </li>
+                                        <% } %>
                                     <% } else { %>
                                 <li class="main-nav-list-item" >
-                                    <a class="main-nav-list-link" href="<%- theme.menu[i] %>"><%= __('index.' + i.toLowerCase()) %></a>
+                                    <a class="main-nav-list-link" href="<%- url_for(theme.menu[i]).replace('../', '') %>"><%= __('index.' + i.toLowerCase()) %></a>
                                 </li>
                             <% }} %>
                         </ul>
