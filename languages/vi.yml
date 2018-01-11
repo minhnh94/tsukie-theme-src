@@ -31,3 +31,7 @@ insight:
     categories: 'Chuyên mục'
     tags: 'Thẻ'
     untitled: '(Không đề)'
+categories:
+    lifestyle: "cuộc sống"
+    technologies: "công nghệ"
+    travel: "du lịch"

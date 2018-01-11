@@ -31,3 +31,7 @@ insight:
     categories: 'カテゴリー'
     tags: 'タグ'
     untitled: '（名称未設定）'
+categories:
+    lifestyle: "人生・生活"
+    technologies: "技術"
+    travel: "旅行"
