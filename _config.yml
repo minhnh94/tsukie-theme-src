@@ -34,7 +34,6 @@ customize:
 # Widgets
 widgets:
     - recent_posts
-    - archive
     - tag
     - links
 
