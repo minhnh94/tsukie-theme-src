@@ -15,10 +15,13 @@
         } else if (page.tag) {
             title = '<i class="icon fa fa-tag"></i>' + __('index.tag') + ': <em>' + page.tag + '</em>';
         } else if (is_post()) {
-            title = list_categories(page.categories, {show_count: false, style: 'none', class: 'page-title', separator: '<i class="icon fa fa-angle-right"></i>'});
+            for (var i in page.categories.data) {
+                title = page.categories.data[i].name + " ";
+            }
             if (title == "") {
                 title = __('index.uncategorized');
             }
+            title = '<i class="icon fa fa-folder-open"></i>' + __('index.category') + ': ' + "<a class='page-title-link'>" + title + "</a>";
         } else if (is_home()) {
             title = '<em class="page-title-link" data-url="home">' + __('index.home') + '</em>';
         } else if (page.subtitle) {
