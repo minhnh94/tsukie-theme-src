@@ -4,7 +4,11 @@
             <div class="container-inner">
                 <div id="header-title">
                     <h1 class="logo-wrap">
-                        <a href="<%- url_for() %>" class="logo"></a>
+                        <% if (page.lang === "en") { %>
+                            <a href="<%- url_for() %>" class="logo"></a>
+                        <% } else { %>
+                            <a href="<%- url_for().replace('../', '') %>" class="logo"></a>
+                        <% } %>
                     </h1>
                     <% if (theme.subtitle) { %>
                         <h2 class="subtitle-wrap">
@@ -42,7 +46,7 @@
                             <% }} %>
                         </ul>
                         <nav id="sub-nav">
-                            <%- partial('search/index') %>
+
                         </nav>
                     </div>
                 </div>
