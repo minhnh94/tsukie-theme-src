@@ -15,7 +15,6 @@
                     }) %>
                 <% } else { %>
                     <% for (var i in post.categories.data) { %>
-                        <% console.log(post.categories.data[0].path) %>
                         <a class="article-category-link" href="<%- url_for(post.categories.data[i].path).replace('../', '') %>"><%= theme.menu["Categories"][post.lang][post.categories.data[i].slug] %></a>
                     <% } %>
                 <% } %>

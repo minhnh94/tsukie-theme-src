@@ -23,8 +23,15 @@
         } else if (is_tag()) {
             title = __('index.tag') + ': ' + page.tag;
         }
+
+        var headTitle = "";
+        if (page.lang === "ja") {
+            headTitle = "つきへ・全ては人生の元に"
+        } else {
+            headTitle = config.title;
+        }
     %>
-    <title><% if (title) { %><%= title %> | <% } %><%= config.title %></title>
+    <title><% if (title) { %><%= title %> | <% } %><%= headTitle %></title>
     <% if (theme.plugins.bing_site_verification) { %>
       <meta name="msvalidate.01" content="<%- theme.plugins.bing_site_verification %>" />
     <% } %>
