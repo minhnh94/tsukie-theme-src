@@ -17,6 +17,16 @@ menu:
             ryoko: 旅行
     About: /about.html
 
+tag:
+    en:
+        software-development: software development
+        development-experience: development experience
+        trivia: trivia
+    vi:
+        tan-man: tản mạn
+    ja:
+        zatsudan: 雑談
+
 # Customize
 customize:
     logo:

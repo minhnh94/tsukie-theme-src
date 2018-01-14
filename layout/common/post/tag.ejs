@@ -1,6 +1,15 @@
 <% if (post.tags && post.tags.length) { %>
     <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <%- list_tags(post.tags, { show_count: false, style: 'link' }) %>
+        <% for (var i in post.tags.data) { %>
+            <span class="post-tag">
+                <i class="fa fa-tag"></i>
+                <% var dictTags = theme.tag[page.lang] %>
+                <% if (page.lang === "en") { %>
+                    <a href="<%- url_for("tags/" + post.tags.data[i].name) %>"><%= dictTags[post.tags.data[i].name] %></a>
+                <% } else { %>
+                    <a href="<%- url_for("tags/" + post.tags.data[i].name).replace('../', '') %>"><%= dictTags[post.tags.data[i].name] %></a>
+                <% } %>
+            </span>
+        <% } %>
     </div>
 <% } %>

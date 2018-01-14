@@ -11,12 +11,15 @@
             }
             title = '<i class="icon fa fa-archive"></i>' + title;
         } else if (page.category) {
-            title = '<i class="icon fa fa-folder-open"></i>' + __('index.category') + ': <em class="page-title-link">' + page.category + '</em>';
+            var definedCategories = theme.menu["Categories"][page.lang];
+            title = '<i class="icon fa fa-folder-open"></i>' + __('index.category') + ': <em class="page-title-link">' + definedCategories[page.category] + '</em>';
         } else if (page.tag) {
-            title = '<i class="icon fa fa-tag"></i>' + __('index.tag') + ': <em>' + page.tag + '</em>';
+            var dict = theme.tag[page.lang];
+            title = '<i class="icon fa fa-tag"></i>' + __('index.tag') + ': <em>' + dict[page.tag] + '</em>';
         } else if (is_post()) {
             for (var i in page.categories.data) {
-                title = page.categories.data[i].name + " ";
+                var definedCategories = theme.menu["Categories"][page.lang];
+                title = definedCategories[page.categories.data[i].name] + " ";
             }
             if (title == "") {
                 title = __('index.uncategorized');

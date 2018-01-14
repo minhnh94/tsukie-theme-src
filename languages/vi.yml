@@ -5,7 +5,7 @@ index:
     archive: 'Lưu trữ'
     category: 'Chuyên mục'
     uncategorized: 'Chưa phân loại'
-    tag: 'Thẻ'
+    tag: 'Tag'
 nav:
     current_page:
         other: '%d '
