@@ -35,7 +35,6 @@ customize:
 widgets:
     - recent_posts
     - tag
-    - links
 
 # Search
 search:
