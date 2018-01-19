@@ -21,6 +21,25 @@
             </div>
             <div class="date"><time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date) %></time></div>
         </div>
+        <% if (post.tags && post.tags.length) { %>
+            <div class="article-tag-summary">
+                <ul>
+                    <% for (var i in post.tags.data) { %>
+                    <li style="display: inline-block; margin: 12px 0 0 -2px; padding: 0">
+                        <span class="post-tag-summary">
+                        <i class="fa fa-tag"></i>
+                        <% var dictTags = theme.tag[page.lang] %>
+                        <% if (page.lang === "en") { %>
+                            <a href="<%- url_for("tags/" + post.tags.data[i].name) %>"><%= dictTags[post.tags.data[i].name] %></a>
+                        <% } else { %>
+                            <a href="<%- url_for("tags/" + post.tags.data[i].name).replace('../', '') %>"><%= dictTags[post.tags.data[i].name] %></a>
+                        <% } %>
+                        </span>
+                    </li>
+                    <% } %>
+                </ul>
+            </div>
+        <% } %>
         <%- partial('post/title', { class_name: 'article-title', linkable: true }) %>
         <p class="article-excerpt">
             <% if (post.summary) { %>
