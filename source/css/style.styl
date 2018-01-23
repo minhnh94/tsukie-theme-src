@@ -115,6 +115,16 @@ code
         em, a
             @extend $block-caption
             color: color-grey
+        a:hover::after
+            width: 100%
+        a::after
+            content: "";
+            display: block;
+            width: 0;
+            transition: width 0.3s;
+            /* border or (height & background) etc. */
+            border-bottom: 1px solid #f00;
+
     .main-body-content
         clearfix()
 

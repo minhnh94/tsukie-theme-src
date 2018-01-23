@@ -1,40 +1,46 @@
 <div class="main-body-header">
     <h1 class="header">
-    <%
-        var title = page.title;
-        if (page.archive) {
-            title = __('index.archive');
-            if (page.month) {
-                title += ': ' + page.year + '/' + page.month;
-            } else if (page.year) {
-                title += ': ' + page.year;
-            }
-            title = '<i class="icon fa fa-archive"></i>' + title;
-        } else if (page.category) {
-            var definedCategories = theme.menu["Categories"][page.lang];
-            title = '<i class="icon fa fa-folder-open"></i>' + __('index.category') + ': <em class="page-title-link">' + definedCategories[page.category] + '</em>';
-        } else if (page.tag) {
-            var dict = theme.tag[page.lang];
-            title = '<i class="icon fa fa-tag"></i>' + __('index.tag') + ': <em>' + dict[page.tag] + '</em>';
-        } else if (is_post()) {
-            for (var i in page.categories.data) {
+        <%
+            var title = page.title;
+            if (page.archive) {
+                title = __('index.archive');
+                if (page.month) {
+                    title += ': ' + page.year + '/' + page.month;
+                } else if (page.year) {
+                    title += ': ' + page.year;
+                }
+                title = '<i class="icon fa fa-archive"></i>' + title;
+            } else if (page.category) {
                 var definedCategories = theme.menu["Categories"][page.lang];
-                title = definedCategories[page.categories.data[i].name] + " ";
+                title = '<i class="icon fa fa-folder-open"></i>' + __('index.category') + ': <em class="page-title-link">' + definedCategories[page.category] + '</em>';
+            } else if (page.tag) {
+                var dict = theme.tag[page.lang];
+                title = '<i class="icon fa fa-tag"></i>' + __('index.tag') + ': <em>' + dict[page.tag] + '</em>';
+            } else if (is_post()) {
+                for (var i in page.categories.data) {
+                    var definedCategories = theme.menu["Categories"][page.lang];
+                    title = definedCategories[page.categories.data[i].name] + " ";
+                }
+                if (title == "") {
+                    title = __('index.uncategorized');
+                }
+                title = '<i class="icon fa fa-folder-open"></i>' + __('index.category') + ': ' + "<a class='page-title-link'>" + title + "</a>";
+            } else if (is_home()) {
+                title = '<em class="page-title-link" data-url="home">' + __('index.home') + '</em>';
+            } else if (page.subtitle) {
+                title = '<em class="page-title-link" data-url="' + url_for(page.path) + '">' + page.subtitle + '</em>';
+            } else if (page.title) {
+                title = '<em class="page-title-link" data-url="' + url_for(page.path) + '">' + page.title + '</em>';
+            } else {
+                title = config.title;
             }
-            if (title == "") {
-                title = __('index.uncategorized');
-            }
-            title = '<i class="icon fa fa-folder-open"></i>' + __('index.category') + ': ' + "<a class='page-title-link'>" + title + "</a>";
-        } else if (is_home()) {
-            title = '<em class="page-title-link" data-url="home">' + __('index.home') + '</em>';
-        } else if (page.subtitle) {
-            title = '<em class="page-title-link" data-url="' + url_for(page.path) + '">' + page.subtitle + '</em>';
-        } else if (page.title) {
-            title = '<em class="page-title-link" data-url="' + url_for(page.path) + '">' + page.title + '</em>';
-        } else {
-            title = config.title;
-        }
-    %>
-    <%- title %>
+        %>
+        <%- title %>
+
+        <br>Language: <ul style="position: relative; display: inline-block;">
+            <li style="display: inline-block;"><a href="/">English</a></li>・
+            <li style="display: inline-block;"><a href="/vi/">Tiếng Việt</a></li>・
+            <li style="display: inline-block;"><a href="/ja/">日本語</a></li>
+        </ul>
     </h1>
 </div>
