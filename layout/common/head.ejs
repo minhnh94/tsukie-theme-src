@@ -19,9 +19,11 @@
                 title += ': ' + page.year;
             }
         } else if (is_category()) {
-            title = __('index.category') + ': ' + page.category;
+            var definedCategories = theme.menu["Categories"][page.lang];
+            title = __('index.category') + ': ' + definedCategories[page.category];
         } else if (is_tag()) {
-            title = __('index.tag') + ': ' + page.tag;
+            var dict = theme.tag[page.lang];
+            title = __('index.tag') + ': ' + dict[page.tag];
         }
 
         var headTitle = "";
