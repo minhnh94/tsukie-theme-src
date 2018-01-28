@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <% if (page.lang === 'ja') { %>
-        <meta name="description" content="つきえ（月へ）・　つきえスタジオのブログ。内容は主に日常生活、技術（ほとんどはIT系、情報技術）、旅行（ほとんどの記事は日本国内について）、エンタテーメント（アニメ、ゲームのレビュー）等。">
+        <meta name="description" content="つきへ（月へ）・　つきへスタジオのブログ。内容は主に日常生活、技術（ほとんどはIT系、情報技術）、旅行（ほとんどの記事は日本国内について）、エンタテーメント（アニメ、ゲームのレビュー）等。">
     <% } else if (page.lang === 'vi') { %>
         <meta name="description" content="Tsukie - Blog của Tsukie studio. Nội dung của blog về cuộc sống hàng ngày, về công nghệ (chủ yếu về công nghệ phần mềm, IT), du lịch (hầu hết về Nhật Bản), giải trí (anime, hoạt hình, game...).">
     <% } else { %>
@@ -48,6 +48,7 @@
     <% } %>
     <%- open_graph({
         image:          thumbnail(page),
+        description: page.summary,
         fb_app_id:      theme.miscellaneous.open_graph.fb_app_id,
         fb_admins:      theme.miscellaneous.open_graph.fb_admins,
         twitter_id:     theme.miscellaneous.open_graph.twitter_id,
