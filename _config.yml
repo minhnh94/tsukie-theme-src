@@ -33,6 +33,8 @@ tag:
         hosting: hosting
     ja:
         zatsudan: 雑談
+        kabu: 株
+        keiken: 経験
         supotsu: スポーツ
 
 # Customize
@@ -69,8 +71,8 @@ share: default # options: jiathis, bdshare, addtoany, default
 
 # Plugins
 plugins:
-    lightgallery: true # options: true, false
-    justifiedgallery: true # options: true, false
+    lightgallery: false # options: true, false
+    justifiedgallery: false # options: true, false
     google_analytics: UA-112909631-1
     baidu_analytics: # enter Baidu Analytics hash key
     bing_site_verification: # enter Bing verification key here
