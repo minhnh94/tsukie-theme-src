@@ -1,5 +1,5 @@
-<% var last, postCount = 0; %>
-<% page.posts.each(function(post, i) { %>
+<% var last; %>
+<% page.posts.each(function(post) { %>
     <% if (page.lang === post.lang) { %>
         <% var year = post.date.year(); %>
         <% if (last != year) { %>
@@ -17,7 +17,7 @@
         <% if (postCount % 2 == 1) { %>
             <div class="article-row">
         <% } %>
-            <%- partial('summary', { post: post }) %>
+        <%- partial('summary', { post: post }) %>
         <% if (postCount == page.posts.length || postCount % 2 == 0) { %>
             </div>
         <% } %>
@@ -27,7 +27,7 @@
 <% if (page.posts.length) { %>
     </div></section>
 <% } %>
-<% if (page.total > 1) { %>
+<% if (postCount > 1) { %>
     <nav id="page-nav">
         <span class="pages"><%= _p('nav.current_page', page.current) %><%= _p('nav.total_page', page.total) %></span>
         <%- paginator({prev_text: '&laquo;', next_text: '&raquo;'}) %>
