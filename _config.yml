@@ -21,12 +21,19 @@ tag:
     en:
         software-development: software development
         experience: experience
+        software: software
+        jetbrains: jetbrains
         trivia: trivia
         lifestyle: lifestyle
         website: website
         hosting: hosting
         stock: stock
-        two-cents: two-cents
+        two-cents: two cents
+        mental: mental
+#        travel: travel
+#        japan: japan
+#        nature: nature
+#        park: park
     vi:
         tan-man: tản mạn
         website: website
@@ -64,7 +71,8 @@ search:
 
 # Comment
 comment:
-    facebook: true # enter true to enable
+    facebook: false # enter true to enable
+    disqus: tsukie-com
 
 # Share
 share: default # options: jiathis, bdshare, addtoany, default
