@@ -18,6 +18,9 @@
         <footer class="article-footer">
             <div class="fb-like" data-href="<%= post.permalink + "index.html" %>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true" style="padding: 0 0 0 30%"></div>
             <a class="twitter-share-button" href="https://twitter.com/intent/tweet"></a>
+            <br>Related articles
+            <% console.log(popular_posts_json({maxCount: 3}, post)); %>
+            <%- htmlGenerator(popular_posts_json({maxCount: 3}, post)) %>
         </footer>
     </div>
 </article>
