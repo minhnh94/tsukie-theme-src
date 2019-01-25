@@ -1,6 +1,7 @@
 index:
     home: 'ホーム'
     about: 'このブログについて'
+    contact-us: 'お問い合わせ'
     search: '検索'
     archive: 'アーカイブ'
     category: 'カテゴリー'

@@ -1,6 +1,7 @@
 index:
     home: 'Home'
     about: 'About'
+    contact-us: 'Contact us'
     search: 'Search'
     archive: 'Archive'
     category: 'Category'
