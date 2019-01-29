@@ -4,7 +4,13 @@
             <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
             <div class="credit">
                 <p>Copyright © <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %></p>
-                <div><a href="terms-and-conditions.html">Terms and conditions</a> <a href="privacy-policy.html">Privacy policy</a></div>
+                <div>
+                	<% if (page.lang === "en") { %>
+                		<a href="<%- url_for('terms-and-conditions.html') %>">Terms and conditions</a> <a href="<%- url_for('privacy-policy.html') %>">Privacy policy</a>
+                	<% } else { %>
+                		<a href="<%- url_for('terms-and-conditions.html').replace('../', '') %>">Terms and conditions</a> <a href="<%- url_for('privacy-policy.html').replace('../', '') %>">Privacy policy</a>
+                	<% } %>
+        		</div>
             </div>
         </div>
     </div>
