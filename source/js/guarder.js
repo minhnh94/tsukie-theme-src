@@ -23,5 +23,4 @@ if (window.canRunAds === undefined) {
 	`);
 	$('body').css('overflow', 'hidden');
 }
-$("#will-show").removeClass("no-show-if-js-disabled");
-$('header').removeClass("no-show-if-js-disabled");
+$(".no-show-if-js-disabled").removeClass("no-show-if-js-disabled");
