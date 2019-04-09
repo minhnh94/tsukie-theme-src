@@ -4,7 +4,12 @@
     <div id="fb-root"></div>
     <div id="wrap">
         <%- partial('common/header', null, {cache: !config.relative_link}) %>
-        <div class="container container-body-part">
+        <noscript>
+                <p>Please enable Javascript or the website cannot function normally.</p>
+                <p>Hãy kích hoạt Javascript. Website không hoạt động được nếu không có Javascript.</p>
+                <p>Javascriptが無効になっている限りサイトが正常に動けません。Javascriptを有効にしてください。</p>
+        </noscript>
+        <div id="will-show" class="container container-body-part no-show-if-js-disabled">
             <div class="main-body container-inner">
                 <div class="main-body-inner">
                     <section id="main">
