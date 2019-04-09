@@ -41,6 +41,8 @@ tag:
 #        nature: nature
 #        park: park
         self-help: self help
+        php: php
+        laravel: laravel
     vi:
         tan-man: tản mạn
         website: website
