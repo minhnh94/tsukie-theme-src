@@ -2,16 +2,16 @@
 <!--<body ondragstart="return false;" ondrop="return false;" oncontextmenu="return false;">-->
 <body>
     <div id="fb-root"></div>
+    <noscript>
+        <h2 style="font-size: 2em">Please enable Javascript or the website cannot function normally.</h2><br>
+        <h2 style="font-size: 2em">Hãy kích hoạt Javascript. Website không hoạt động được nếu không có Javascript.</h2><br>
+        <h2 style="font-size: 2em">Javascriptが無効になっている限りサイトが正常に動けません。Javascriptを有効にしてください。</h2>
+    </noscript>
     <div id="wrap">
         <%- partial('common/header', null, {cache: !config.relative_link}) %>
-        <div id="will-show" class="container container-body-part">
+        <div class="container container-body-part no-show-if-js-disabled">
             <div class="main-body container-inner">
                 <div class="main-body-inner">
-                    <noscript>
-                        <h2 style="font-size: 2em">Please enable Javascript or the website cannot function normally.</h2><br>
-                        <h2 style="font-size: 2em">Hãy kích hoạt Javascript. Website không hoạt động được nếu không có Javascript.</h2><br>
-                        <h2 style="font-size: 2em">Javascriptが無効になっている限りサイトが正常に動けません。Javascriptを有効にしてください。</h2>
-                    </noscript>
                     <section id="main">
                         <%- partial('common/content-title') %>
                         <div class="main-body-content">
