@@ -1,4 +1,3 @@
-$(".no-show-if-js-disabled").removeClass("no-show-if-js-disabled");
 if (window.canRunAds === undefined) {
 	for (var i = 1; i <= 10; i++) {
 		$('body').append(`
