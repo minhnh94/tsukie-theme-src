@@ -2,12 +2,6 @@
 <!--<body ondragstart="return false;" ondrop="return false;" oncontextmenu="return false;">-->
 <body>
     <div id="fb-root"></div>
-    <noscript>
-        <img src="https://i.imgur.com/IOpkgxH.jpg" style="width: 100%; margin: 0 auto">
-        <style type="text/css">
-            .main-body-inner {display: none;}
-        </style>
-    </noscript>
     <div id="wrap">
         <%- partial('common/header', null, {cache: !config.relative_link}) %>
         <div class="container container-body-part">
@@ -26,6 +20,12 @@
         <%- partial('common/footer', null, {cache: !config.relative_link}) %>
     </div>
 
+    <noscript>
+        <img src="https://i.imgur.com/IOpkgxH.jpg" style="width: 100%; margin: 0 auto">
+        <style type="text/css">
+            .main-body-inner {display: none;}
+        </style>
+    </noscript>
     <%- partial('common/scripts') %>
 </body>
 </html>
