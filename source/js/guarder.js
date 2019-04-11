@@ -1,3 +1,4 @@
+ga('send', 'event', 'Adblock', 'page_loaded');
 if (window.canRunAds === undefined) {
 	for (var i = 1; i <= 10; i++) {
 		$('body').append(`
@@ -21,4 +22,5 @@ if (window.canRunAds === undefined) {
 	`);
 	}
 	$('body').css('overflow', 'hidden');
+	ga('send', 'event', 'Adblock', 'ad_blocked');
 }
