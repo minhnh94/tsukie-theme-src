@@ -1,110 +1,114 @@
 # Menus
 menu:
-    Home: /index.html
-    # Delete this row if you don't want categories in your header nav bar
-    Categories:
-        en:
-            lifestyle: lifestyle
-            technologies: technologies
-            travel: travel
-        vi:
-            cuoc-song: cuộc sống
-            cong-nghe: công nghệ
-            du-lich: du lịch
-        ja:
-            jinsei-seikatsu: 人生・生活
-            gijutsu: 技術
-            ryoko: 旅行
-    Contact-us: /contact-us.html
+  Home: /index.html
+  # Delete this row if you don't want categories in your header nav bar
+  Categories:
+    en:
+      lifestyle: lifestyle
+      technologies: technologies
+      travel: travel
+    vi:
+      cuoc-song: cuộc sống
+      cong-nghe: công nghệ
+      du-lich: du lịch
+    ja:
+      jinsei-seikatsu: 人生・生活
+      gijutsu: 技術
+      ryoko: 旅行
+  Contact-us: /contact-us.html
 
 tag:
-    en:
-        software-development: software development
-        programming: programming
-        mysql: mysql
-        experience: experience
-        software: software
-        jetbrains: jetbrains
-        trivia: trivia
-        lifestyle: lifestyle
-        website: website
-        hosting: hosting
-        stock: stock
-        two-cents: two cents
-        mental: mental
-#        travel: travel
-        japan: japan
-        tokyo: tokyo
-        food: food
-        ramen: ramen
-        food-series: food series
-#        nature: nature
-#        park: park
-        self-help: self help
-        php: php
-        laravel: laravel
-    vi:
-        tan-man: tản mạn
-        website: website
-        hosting: hosting
-        blogging: blogging
-        kinh-nghiem: kinh nghiệm
-        cong-nghe: công nghệ
-    ja:
-        zatsudan: 雑談
-        kabu: 株
-        keiken: 経験
-        supotsu: スポーツ
+  en:
+    # Lifestyle
+    self-help: self help
+    lifestyle: lifestyle
+    stock: stock
+    mental: mental
+    # Technologies
+    software-development: software development
+    programming: programming
+    mysql: mysql
+    software: software
+    jetbrains: jetbrains
+    website: website
+    hosting: hosting
+    php: php
+    laravel: laravel
+    hack: hack
+    ios: ios
+    jailbreak: jailbreak
+    # Travel
+    japan: japan
+    tokyo: tokyo
+    ramen: ramen
+    food: food
+    food-series: food series
+    # Common
+    experience: experience
+    trivia: trivia
+    two-cents: two cents
+  vi:
+    tan-man: tản mạn
+    website: website
+    hosting: hosting
+    blogging: blogging
+    kinh-nghiem: kinh nghiệm
+    cong-nghe: công nghệ
+  ja:
+    zatsudan: 雑談
+    kabu: 株
+    keiken: 経験
+    supotsu: スポーツ
 
 # Customize
 customize:
-    logo:
-        width: 165
-        height: 80
-        url: images/logo-header.png
-    theme_color: '#006bde'
-    highlight: androidstudio
-    sidebar: right # sidebar position, options: left, right
-    thumbnail: true # enable posts thumbnail, options: true, false
-    favicon: css/images/favicon.jpg
-    social_links: # for more icons, please see http://fontawesome.io/icons/#brand
-        github: https://github.com/minhnh94
+  logo:
+    width: 165
+    height: 80
+    url: images/logo-header.png
+  theme_color: '#006bde'
+  highlight: androidstudio
+  sidebar: right # sidebar position, options: left, right
+  thumbnail: true # enable posts thumbnail, options: true, false
+  favicon: css/images/favicon.jpg
+  social_links: # for more icons, please see http://fontawesome.io/icons/#brand
+    github: https://github.com/minhnh94
 
 # Widgets
 widgets:
-    - recent_posts
-    - tag
+  - recent_posts
+  - tag
 
 # Search
 search:
-    insight: # you need to install `hexo-generator-json-content` before using Insight Search
-    swiftype: # enter swiftype install key here
-    baidu: false # you need to disable other search engines to use Baidu search, options: true, false
+  insight: # you need to install `hexo-generator-json-content` before using Insight Search
+  swiftype: # enter swiftype install key here
+  baidu: false # you need to disable other search engines to use Baidu search, options: true, false
 
 # Comment
 comment:
-    facebook: false # enter true to enable
-    disqus: tsukie-com
+  facebook: false # enter true to enable
+  disqus: tsukie-com
 
 # Share
 share: default # options: jiathis, bdshare, addtoany, default
 
 # Plugins
 plugins:
-    lightgallery: false # options: true, false
-    justifiedgallery: false # options: true, false
-    google_analytics: UA-112909631-1
-    baidu_analytics: # enter Baidu Analytics hash key
-    bing_site_verification: # enter Bing verification key here
-    mathjax: false # options: true, false
+  lightgallery: false # options: true, false
+  justifiedgallery: false # options: true, false
+  google_analytics: UA-112909631-1
+  baidu_analytics: # enter Baidu Analytics hash key
+  bing_site_verification: # enter Bing verification key here
+  mathjax: false # options: true, false
 
 # Miscellaneous
 miscellaneous:
-    open_graph: # see http://ogp.me
-        fb_app_id: 153050218821313
-        fb_admins:
-        twitter_id:
-        google_plus:
-    links:
-        Kaito Yuuki's Github profile: https://github.com/minhnh94
-        Fuuka Adachi's Github profile: https://github.com/fuuka1994
+  open_graph: # see http://ogp.me
+    fb_app_id: 153050218821313
+    fb_admins:
+    twitter_id:
+    google_plus:
+  links:
+    Kaito Yuuki's Github profile: https://github.com/minhnh94
+    Fuuka Adachi's Github profile: https://github.com/fuuka1994
