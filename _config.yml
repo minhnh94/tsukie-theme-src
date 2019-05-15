@@ -28,7 +28,6 @@ tag:
     software-development: software development
     programming: programming
     mysql: mysql
-    software: software
     jetbrains: jetbrains
     website: website
     hosting: hosting
@@ -47,6 +46,7 @@ tag:
     experience: experience
     trivia: trivia
     two-cents: two cents
+    blogging: blogging
   vi:
     tan-man: tản mạn
     website: website
