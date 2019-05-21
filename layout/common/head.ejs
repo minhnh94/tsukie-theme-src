@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="<%= page.lang %>">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112909631-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-112909631-1');
+    </script>
     <meta charset="utf-8">
     <% if (is_post()) { %>
         <meta name="description" content="<%= page.summary %>">
