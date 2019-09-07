@@ -36,7 +36,10 @@ tag:
     hack: hack
     ios: ios
     jailbreak: jailbreak
-    dmca: dmca
+    psn: psn
+    facebook: facebook
+    services: services
+#    dmca: dmca
     # Travel
     japan: japan
     tokyo: tokyo
